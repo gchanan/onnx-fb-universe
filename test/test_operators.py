@@ -338,6 +338,10 @@ class TestOperators(TestCase):
         x = Variable(torch.randn(1, 2, 3, 4), requires_grad=True)
         self.assertONNX(nn.SELU(), x)
 
+    def test_instancenorm(self):
+        x = Variable(torch.randn(1, 2, 4, 4).fill_(1.0), requires_grad=True)
+        self.assertONNX(nn.InstanceNorm2d(2), x)
+
 if __name__ == '__main__':
     onnx_test_flag = '--onnx-test'
     _onnx_test = onnx_test_flag in common.UNITTEST_ARGS
