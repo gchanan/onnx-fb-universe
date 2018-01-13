@@ -65,7 +65,7 @@ class TestVerify(TestCase):
                 self.param = Parameter(torch.Tensor([2]))
 
             def forward(self, x):
-                y = x * x
+                y = x * x + self.param * 0
                 self.param.data.add_(1.0)
                 return y
 
