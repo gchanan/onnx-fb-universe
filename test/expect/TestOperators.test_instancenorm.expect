@@ -41,18 +41,6 @@ graph {
     }
   }
   name: "torch-jit-export"
-  initializer {
-    dims: 2
-    data_type: FLOAT
-    name: "1"
-    raw_data: "\315\314\314=\315\314\314="
-  }
-  initializer {
-    dims: 2
-    data_type: FLOAT
-    name: "2"
-    raw_data: "fff?fff?"
-  }
   input {
     name: "0"
     type {
@@ -70,32 +58,6 @@ graph {
           }
           dim {
             dim_value: 4
-          }
-        }
-      }
-    }
-  }
-  input {
-    name: "1"
-    type {
-      tensor_type {
-        elem_type: FLOAT
-        shape {
-          dim {
-            dim_value: 2
-          }
-        }
-      }
-    }
-  }
-  input {
-    name: "2"
-    type {
-      tensor_type {
-        elem_type: FLOAT
-        shape {
-          dim {
-            dim_value: 2
           }
         }
       }
